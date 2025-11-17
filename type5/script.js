@@ -1,8 +1,3 @@
-document.getElementById("heart-button").addEventListener("click", () => {
-  createHeart();
-  addCombo();
-});
-
 /* ------------------------------
     ⭐ 하트 애니메이션
 ------------------------------ */
