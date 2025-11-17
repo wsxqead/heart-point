@@ -206,7 +206,8 @@
       chargeBtn.addEventListener("click", () => {
         heartCurrency += 10;
         updateCurrencyUI();
-        sendBtn.disabled = false;
+        sendBtn.disabled = false; // 다시 활성화
+        sendBtn.textContent = "하트 보내기"; // 버튼 문구 복원
       });
 
       /* -------------------------
