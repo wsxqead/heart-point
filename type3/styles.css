@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* 버튼이 아래에 위치하도록 설정 */
+  height: 100vh;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+
+#heart-container {
+  position: absolute;
+  bottom: 70px; /* 버튼 위로 하트를 생성할 수 있는 공간 설정 */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px; /* 하트가 생성될 영역의 너비 */
+  height: 200px; /* 하트가 떠오를 최대 높이 */
+  pointer-events: none; /* 마우스 이벤트 차단 */
+  overflow: hidden; /* 영역 밖으로 나가는 하트를 숨김 */
+}
+
+button {
+  position: relative;
+  bottom: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #ff5a5f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff787d;
+}
+
+.heart {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  font-size: 24px;
+  color: #ff5a5f;
+  transform: translateX(-50%);
+  will-change: transform, opacity;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 18px 0;
+  background: #ffffffcc;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+.nav-btn {
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+  background: #ffe3ef;
+  color: #ff3b80;
+}
+
+.nav-btn.active {
+  background: #ff3b80;
+  color: white;
+}
